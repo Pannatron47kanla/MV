@@ -31,7 +31,6 @@ circles = cv.HoughCircles(
 
 if circles is None:
     raise RuntimeError("No circles detected - try adjusting HoughCircles params")
-
 circles = np.uint16(np.around(circles))[0]
 
 # 1-baht coins are silver (low/mid saturation) and fall in a narrow radius

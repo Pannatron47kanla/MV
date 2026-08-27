@@ -75,12 +75,19 @@ def measure_and_draw(imgOut, contour, shape):
         origin = (bx, by - 8)
 
     cv2.putText(
-        imgOut, label, origin, cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 1, cv2.LINE_AA
+        imgOut,
+        label,
+        origin,
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.45,
+        (0, 0, 255),
+        1,
+        cv2.LINE_AA,
     )
     return cv2.boundingRect(contour)
 
 
-cap = cv2.VideoCapture("q3.avi")
+cap = cv2.VideoCapture("conwayer.avi")
 while cap.isOpened():
     ret, frame = cap.read()
     if frame is None:
